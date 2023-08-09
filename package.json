@@ -1,0 +1,22 @@
+{
+  "name": "@hayzeddev/html-pdf-converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx ts-node src/index.ts"
+  },
+  "keywords": [
+    "html",
+    "html-to-pdf",
+    "pdf",
+    "html-to-pdf-converter",
+    "html-pdf-converter"
+  ],
+  "author": "Azeez Abdulsalam <azeezade04@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.7.8",
+    "puppeteer": "^21.0.1"
+  }
+}
