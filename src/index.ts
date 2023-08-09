@@ -19,10 +19,10 @@ export const generatePdf = async (pdfOptions: PDFOptions, html: string) => {
   await page.emulateMediaType('screen');
 
   // Downlaod the PDF
-  const buffer = await page.pdf(pdfOptions);
+  const pdfBuffer: Buffer = await page.pdf(pdfOptions);
 
   // Close the browser instance
   await browser.close();
-  console.log(buffer);
-  return buffer;
+  console.log(pdfBuffer);
+  return pdfBuffer;
 };
