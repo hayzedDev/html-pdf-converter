@@ -1,6 +1,6 @@
 import puppeteer, { Browser, PDFOptions, Page } from 'puppeteer';
 
-export const generatePdf = async (pdfOptions: PDFOptions, html: string) => {
+const generatePdf = async (pdfOptions: PDFOptions, html: string) => {
   // Create a browser instance
   const browser: Browser = await puppeteer.launch({
     headless: true,
@@ -26,3 +26,5 @@ export const generatePdf = async (pdfOptions: PDFOptions, html: string) => {
   console.log(pdfBuffer);
   return pdfBuffer;
 };
+
+export default { generatePdf };
