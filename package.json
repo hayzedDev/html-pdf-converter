@@ -1,11 +1,12 @@
 {
   "name": "@hayzeddev/html-pdf-converter",
   "version": "1.0.4",
-  "description": "",
+  "description": "A simple HTML to PDF converter that runs on the server only",
   "main": "dist/index.js",
   "scripts": {
     "start": "npx ts-node src/index.ts",
-    "build:tsc": "tsc --build"
+    "lint": "eslint . --ext .ts",
+    "build": "tsc --build"
   },
   "keywords": [
     "html",
@@ -14,9 +15,6 @@
     "html-to-pdf-converter",
     "html-pdf-converter"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "repository": "https://github.com/hayzedDev/html-to-pdf-library.git",
   "author": "Azeez Abdulsalam <azeezade04@gmail.com>",
   "license": "ISC",
@@ -25,6 +23,9 @@
   },
   "devDependencies": {
     "@types/node": "^20.5.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "eslint": "^8.47.0",
     "typescript": "^5.1.6"
   }
 }
