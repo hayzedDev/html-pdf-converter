@@ -3,7 +3,7 @@ import puppeteer, { Browser, PDFOptions, Page } from 'puppeteer';
 const generatePdf = async (pdfOptions: PDFOptions, html: string) => {
   // Create a browser instance
   const browser: Browser = await puppeteer.launch({
-    headless: true,
+    headless: 'new',
     args: [`--window-size=827,992`, `-webkit-print-color-adjust`],
   });
 
@@ -23,7 +23,6 @@ const generatePdf = async (pdfOptions: PDFOptions, html: string) => {
 
   // Close the browser instance
   await browser.close();
-  console.log(pdfBuffer);
   return pdfBuffer;
 };
 
