@@ -12,10 +12,10 @@ $ npm install --save @hayzeddev/html-pdf-converter
 This works with both CJS and ESM. 
 
 ```javascript
-import { generatePdf } from '@hayzeddev/html-pdf-converter';
+import { generatePdf, pdfOptions } from '@hayzeddev/html-pdf-converter';
 import { join } from 'path';
 
-const options = {
+const options: pdfOptions = {
   path: join(__dirname, 'result.pdf'),
 };
 
@@ -29,7 +29,7 @@ const options = {
 ```
 
 ```
-const generatePdf: (options: Options, html: string) => Promise<Buffer>;
+const generatePdf: (options: pdfOptions, html: string) => Promise<Buffer>;
 ```
 
 ## Config
