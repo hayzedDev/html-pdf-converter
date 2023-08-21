@@ -3,6 +3,7 @@
   "version": "1.0.7",
   "description": "A simple HTML to PDF converter that runs on the server only",
   "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "start": "npx ts-node src/index.ts",
     "lint": "eslint . --ext .ts",
