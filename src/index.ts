@@ -5,7 +5,7 @@ const generatePdf = async (pdfOptions: pdfOptions, html: string) => {
   // Create a browser instance
   const browser: Browser = await puppeteer.launch({
     headless: 'new',
-    args: [`--window-size=827,992`, `-webkit-print-color-adjust`],
+    args: [`-webkit-print-color-adjust`],
   });
 
   // Create a new page
