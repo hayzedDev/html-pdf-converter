@@ -1,4 +1,4 @@
-export interface Options {
+export interface pdfOptions {
   displayHeaderFooter?: boolean; //  Whether to show the header and footer. Defaults to `false`
 
   headerTemplate?: string; // Valid HTML template for the header
