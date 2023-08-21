@@ -6,7 +6,7 @@ const puppeteer_1 = tslib_1.__importDefault(require("puppeteer"));
 const generatePdf = async (pdfOptions, html) => {
     // Create a browser instance
     const browser = await puppeteer_1.default.launch({
-        headless: true,
+        headless: 'new',
         args: [`--window-size=827,992`, `-webkit-print-color-adjust`],
     });
     // Create a new page
@@ -21,7 +21,6 @@ const generatePdf = async (pdfOptions, html) => {
     const pdfBuffer = await page.pdf(pdfOptions);
     // Close the browser instance
     await browser.close();
-    console.log(pdfBuffer);
     return pdfBuffer;
 };
 exports.generatePdf = generatePdf;

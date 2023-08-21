@@ -1,4 +1,4 @@
 /// <reference types="node" />
-import { PDFOptions } from 'puppeteer';
-declare const generatePdf: (pdfOptions: PDFOptions, html: string) => Promise<Buffer>;
-export { generatePdf };
+import { pdfOptions } from './common/interfaces/interface';
+declare const generatePdf: (pdfOptions: pdfOptions, html: string) => Promise<Buffer>;
+export { generatePdf, pdfOptions };
